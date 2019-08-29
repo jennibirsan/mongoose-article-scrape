@@ -1,3 +1,11 @@
+body { 
+    background-image: url(roman-kraft-_Zua2hyvTBk-unsplash.jpg); 
+    background-size: 100% auto; 
+    background-size: cover;
+    display: -webkit-box;
+    margin: auto;
+}
+
 .new-article-btn {
     margin-top: 10px;
   }
