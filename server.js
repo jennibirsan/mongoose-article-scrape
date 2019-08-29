@@ -43,7 +43,6 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, {
-  // useMongoClient: true
 });
 
 
@@ -77,12 +76,7 @@ app.get("/scrape", function(req, res) {
       }
       
       console.log(result);
-      
-      // db.Article.findOne({title:title}).then(function(data) {
-        
-      //   console.log(data);
-
-        // if(data === null) {
+    
 
           db.Article.create(result).then(function(dbArticle) {
             console.log(dbArticle)
