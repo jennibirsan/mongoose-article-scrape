@@ -11,7 +11,7 @@ body {
   }
   
   .fa-github {
-    font-size: 30px;
+    font-size: 40px;
   }
   
   .git-icon {
@@ -24,7 +24,7 @@ body {
 
   .git-icon:hover {
     text-decoration: none;
-    color: #2c7df7;
+    color: rgb(201, 38, 38);
     -webkit-transform: rotateZ(360deg);
     -moz-transform: rotateZ(360deg);
     transform: rotateZ(360deg);
@@ -37,7 +37,7 @@ body {
   
   .title-link:hover {
     text-decoration: none;
-    color: #2c7df7;
+    color: rgb(201, 38, 38);
   }
   
   textarea {
