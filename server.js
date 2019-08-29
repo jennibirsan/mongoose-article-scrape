@@ -91,7 +91,7 @@ app.get("/scrape", function(req, res) {
 // Route for getting all Articles from the db
 app.get("/saved", function(req, res) {
   // Grab every document in the Articles collection
-  db.Article.find({})
+  db.Article.find({saved: true})
     .then(function(dbArticle) {
       console.log(dbArticle);
       res.render("saved", {
