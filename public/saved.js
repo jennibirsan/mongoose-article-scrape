@@ -4,7 +4,7 @@ $.getJSON("/saved", function(data) {
     for (var i = 0; i < data.length; i++) {
   
     $("#articles").append(
-      "<div class='col-sm-4' style='margin-bottom:60px;'><div class='card'><img class='image' src=" + data[i].img + "></img><div class='card-body'><a class='title-link' href='" + data[i].link + "'><h5>" + data[i].title + "</h5></a><hr><p class='card-text'>" + data[i].snippet + "</p><button id='btn-delete' data-id='" + data[i]._id + "' class='btn-note btn btn-outline-primary btn-sm' data-toggle='modal' data-target='#myModal' style='margin-right:10px;'>Note</button><button id='btn-delete' data-id='" + data[i]._id + "' class=' delete-articles btn btn-outline-primary btn-sm'>Delete Article</button></div></div></div>"
+      "<div class='col-sm-4' style='margin-bottom:60px;'><div class='card'><img class='image' src=" + data[i].img + "></img><div class='card-body'><a class='title-link' href='" + data[i].link + "'><h5>" + data[i].title + "</h5></a><hr><p class='card-text'>" + data[i].snippet + "</p><button id='btn-note' data-id='" + data[i]._id + "' class='btn-note btn btn-outline-primary btn-sm' data-toggle='modal' data-target='#myModal' style='margin-right:10px;'>Note</button><button id='btn-delete' data-id='" + data[i]._id + "' class=' delete-articles btn btn-outline-primary btn-sm'>Delete Article</button></div></div></div>"
     );
   }
   
