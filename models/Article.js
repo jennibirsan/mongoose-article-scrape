@@ -9,15 +9,17 @@ var ArticleSchema = new Schema({
   title: {
     type: String,
     required: true,
-    unique: true
+    // unique: true
   },
   // `link` is required and of type String
   link: {
     type: String,
     required: true,
-    unique: true
+    // unique: true
   },
- 
+ img: {
+type: String,
+ },
     snippet: {
       type: String,
     },
@@ -38,6 +40,14 @@ var ArticleSchema = new Schema({
     }
   
   });
+
+
+  ArticleSchema.index({
+    link:1,
+  },
+  {unique:true
+  });
+
 
 // This creates our model from the above schema, using mongoose's model method
 var Article = mongoose.model("Article", ArticleSchema);

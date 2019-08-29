@@ -1,8 +1,10 @@
+// Grab the articles as a json
 $.getJSON("/articles", function (data) {
+    // For each one
   for (var i = 0; i < data.length; i++) {
-
+    // Display the information on the page
     $("#articles").append(
-      "<div class='col-sm-4' style='margin-bottom:60px;'><div class='card'><div class='card-body'><a class='title-link' href='" + data[i].link + "'><h5>" + data[i].title + "</h5></a><hr><p class='card-text'>" + data[i].snippet + "</p><button data-id='" + data[i]._id + "' class='btn-note btn btn-outline-primary btn-sm' data-toggle='modal' data-target='#myModal' style='margin-right:10px;'>Note</button><button id='btn-save' data-id='" + data[i]._id + "' class='btn btn-outline-primary btn-sm'>Save Article</button></div></div></div>"
+      "<div class='col-sm-4' style='margin-bottom:60px;'><div class='card'><img class='image' src=" + data[i].img + "></img><div class='card-body'><a class='title-link' href='" + data[i].link + "'><h5>" + data[i].title + "</h5></a><hr><p class='card-text'>" + data[i].snippet + "</p><button data-id='" + data[i]._id + "' class='btn-note btn btn-outline-primary btn-sm' data-toggle='modal' data-target='#myModal' style='margin-right:10px;'>Note</button><button id='btn-save' data-id='" + data[i]._id + "' class='btn btn-outline-primary btn-sm'>Save Article</button></div></div></div>"
     );
   }
 
@@ -10,7 +12,7 @@ $.getJSON("/articles", function (data) {
 });
 
 
-// When you click the Fetch button
+// When you click the Get Articles button
 $(document).on("click", ".btn-fetch", function () {
   alert('Articles have been fetched!');
 
@@ -43,7 +45,6 @@ $(document).on("click", ".btn-note", function () {
     // With that done, add the note information to the page
     .done(function (data) {
       console.log(data);
-
       $(".modal-title").append("<h5>" + data.title + "</h5>");
       $(".input").append("<textarea id='bodyinput' name='body'></textarea>");
       $(".input").append("<button data-id='" + data._id + "' id='savenote' class='btn btn-primary btn-sm' style='margin-top:20px;'data-dismiss='modal'>Save Note</button>");

@@ -1,9 +1,22 @@
-body { 
-    background-image: url(roman-kraft-_Zua2hyvTBk-unsplash.jpg); 
-    background-size: 100% auto; 
+body{
+    font-family: 'Archivo', sans-serif;
+    color: white;
+    /* Location of the image */
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255,255,255,.1)), url("roman-kraft-_Zua2hyvTBk-unsplash.jpg");
+    /* Background image is centered vertically and horizontally at all times */
+    background-position: center center;
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+    /* Background image is fixed in the viewport so that it doesn't move when 
+       the content's height is greater than the image's height */
+    background-attachment: fixed;
+    /* This is what makes the background image rescale based
+       on the container's size */
     background-size: cover;
-    display: -webkit-box;
-    margin: auto;
+    /* Set a background color that will be displayed
+       while the background image is loading */
+    background-color: #464646;
+    transition: 1s opacity;
 }
 
 .new-article-btn {
@@ -47,6 +60,15 @@ body {
     width: 100%;
     background-color: #ffffff;
     border: 1px solid #cfcfcf;
+    color: black
+  }
+
+  #bodyinput{
+      color: black
+  }
+
+  .card-text{
+      color: black
   }
   
   #note {
