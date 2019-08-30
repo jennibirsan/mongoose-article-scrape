@@ -42,7 +42,7 @@ https://jb-mongo-article-scraper-live.herokuapp.com/
 
 ## Deleting Article
 (picture of saved articles after deleting one of the news articles)
-![picture](screenshots/deleted.png)
+![picture](screenshots/delete.png)
 
 ## Database
 (picture of the database)
