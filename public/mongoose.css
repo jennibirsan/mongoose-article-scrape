@@ -64,11 +64,11 @@ body{
   }
 
   #bodyinput{
-      color: black
+      color: black;
   }
 
   .card-text{
-      color: rgb(151, 146, 138)
+      color: rgb(151, 146, 138);
   }
   
   #note {
@@ -76,6 +76,14 @@ body{
     font-size: 13px;
     color: #616161;
     letter-spacing: 1px;
+  }
+
+  h5 {
+    color: black;
+  }
+
+  .modal-title{
+    color: black;
   }
 
   #bfnlogo {
