@@ -9,12 +9,12 @@ IG: jennibirsan
 This mongoose article scraper grabs articles from Buzzfeed News and places them on this webpage. Once you scrape the articles, they are saved to the mongoDB. You can save these articles and access them later in the "Saved Articles" landing page. In the Saved Articles landing page, you can add notes to the article and you can delete it from your saved queue. 
 
 ## Modules Used
-Moment
-Node Express
-Body Parser
-Logger
-Mongoose
-Request
+Moment,
+Node Express,
+Body Parser,
+Logger,
+Mongoose,
+Request,
 Cheerio
 
 ## Database Used
